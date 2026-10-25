@@ -1,0 +1,63 @@
+import {
+  UserX,
+  AlertOctagon,
+  EyeOff,
+  Footprints,
+  MailWarning,
+  Siren,
+  MessageSquareWarning,
+  ShieldAlert,
+  Image as ImageIcon,
+  Link2,
+  MessageSquare,
+  StickyNote,
+  FileCheck2,
+  PhoneIncoming,
+  HeartPulse,
+  KeyRound,
+  Sprout,
+  Coffee,
+  Plane,
+  ShoppingBag,
+  DoorOpen,
+  Car,
+  PhoneCall,
+  TriangleAlert,
+  LifeBuoy,
+  BadgeCheck,
+} from 'lucide-react';
+
+// Data files reference icons by name; this map keeps imports explicit and tree-shakeable.
+const MAP = {
+  UserX,
+  AlertOctagon,
+  EyeOff,
+  Footprints,
+  MailWarning,
+  Siren,
+  MessageSquareWarning,
+  ShieldAlert,
+  Image: ImageIcon,
+  Link2,
+  MessageSquare,
+  StickyNote,
+  FileCheck2,
+  PhoneIncoming,
+  HeartPulse,
+  KeyRound,
+  Sprout,
+  Coffee,
+  Plane,
+  ShoppingBag,
+  DoorOpen,
+  Car,
+  PhoneCall,
+  TriangleAlert,
+  LifeBuoy,
+  BadgeCheck,
+};
+
+export default function Icon({ name, ...props }) {
+  const Cmp = MAP[name] || ShieldAlert;
+  return <Cmp aria-hidden="true" {...props} />;
+}
